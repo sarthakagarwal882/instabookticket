@@ -1,16 +1,13 @@
 import { useState } from "react";
-import { BiSearch } from 'react-icons/bi'
+// import { BiSearch } from 'react-icons/bi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom'
 import './NavbarStyles.css'
 import { useSelector } from "react-redux";
-import Cookies from "js-cookie";
 const Navbar = () => {
-    // console.log(useSelector((userInfo) => { return (userInfo.user.data) }));
     const navigateTo = useNavigate()
     const state = useSelector((userInfo) => { return (userInfo.user.data) })
     const [searchText, setSearchText] = useState("")
-    console.log(state);
 
 
     // function handleSearchChange(data) {
